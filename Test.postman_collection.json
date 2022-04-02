@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "7514afaa-ea0b-4308-a8fc-691b5ff952fb",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateBuyer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Syed Abdullah\",\r\n    \"password\":\"1234564\",\r\n    \"email\":\"salizahid25@gmail.com\",\r\n    \"contact\":\"03041699992\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-bab-ul-ilm-technologies.cloudfunctions.net/addBuyer",
+					"protocol": "https",
+					"host": [
+						"us-central1-bab-ul-ilm-technologies",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"addBuyer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateSeller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Waleed Mosses\",\r\n    \"password\":\"123456\",\r\n    \"email\":\"waleed75@gmail.com\",\r\n    \"contact\":\"03041699991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-bab-ul-ilm-technologies.cloudfunctions.net/addSeller",
+					"protocol": "https",
+					"host": [
+						"us-central1-bab-ul-ilm-technologies",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"addSeller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePackage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"buyer\":\"lVaUh2Ku7LmtU01OU8pC\",\r\n    \"seller\":\"t3gQcsS0SM7tE2cZUPPg\",\r\n    \"metal\":\"Zinq\",\r\n    \"quantity\":\"15-G\",\r\n    \"origin\":[\"31.3739\", \"74.3675\"],\r\n    \"destination\":[\"31.6211\",\"74.2824\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-bab-ul-ilm-technologies.cloudfunctions.net/addPackage",
+					"protocol": "https",
+					"host": [
+						"us-central1-bab-ul-ilm-technologies",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"addPackage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateShipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shipmentType\": \"truck\",\r\n    \"packages\": \"BPblxB5UW097R4K1Pk3f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-bab-ul-ilm-technologies.cloudfunctions.net/createShippment",
+					"protocol": "https",
+					"host": [
+						"us-central1-bab-ul-ilm-technologies",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"createShippment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateShipmentRail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shipmentType\": \"rail\",\r\n    \"packages\": [\"BPblxB5UW097R4K1Pk3f\", \"Twfeu7ln4lMUSgCIuH8v\", \"ZP8lsqGWAoSRpGx3U6It\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-bab-ul-ilm-technologies.cloudfunctions.net/createShippment",
+					"protocol": "https",
+					"host": [
+						"us-central1-bab-ul-ilm-technologies",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"createShippment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipment Reporting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-central1-bab-ul-ilm-technologies.cloudfunctions.net/shipmentReport",
+					"protocol": "https",
+					"host": [
+						"us-central1-bab-ul-ilm-technologies",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"shipmentReport"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
